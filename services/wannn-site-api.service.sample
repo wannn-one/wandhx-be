@@ -1,0 +1,16 @@
+[Unit]
+Description=<SERVICE_NAME>
+After=<AFTER_TARGET>
+
+[Service]
+Type=simple
+User=<USER>
+WorkingDirectory=<WORKING_DIRECTORY>
+ExecStart=<EXEC_START>
+Restart=always
+RestartSec=3
+Environment=GO_ENV=production
+Environment=PORT=<PORT>
+
+[Install]
+WantedBy=multi-user.target 
