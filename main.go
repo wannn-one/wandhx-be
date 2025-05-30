@@ -34,6 +34,11 @@ func main() {
 
 	// Routes
 	api := app.Group("/")
+
+	// Home
+	api.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Welcome to wandhx.site Backend API!")
+	})
 	
 	// Experience routes
 	experiences := api.Group("experiences")

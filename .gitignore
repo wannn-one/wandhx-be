@@ -62,3 +62,6 @@ tmp/
 # System service files
 *.service
 *.pid
+
+# Nginx configuration files
+*.conf

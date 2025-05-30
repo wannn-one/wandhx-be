@@ -1,16 +1,15 @@
 [Unit]
 Description=<SERVICE_NAME>
-After=<AFTER_TARGET>
+After=network.target
 
 [Service]
 Type=simple
-User=<USER>
 WorkingDirectory=<WORKING_DIRECTORY>
 ExecStart=<EXEC_START>
-Restart=always
+Restart=on-failure
 RestartSec=3
-Environment=GO_ENV=production
-Environment=PORT=<PORT>
+User=ubuntu
+EnvironmentFile=<ENVIRONMENT_FILE>
 
 [Install]
-WantedBy=multi-user.target 
+WantedBy=multi-user.target
